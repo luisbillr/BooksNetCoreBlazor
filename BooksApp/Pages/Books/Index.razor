@@ -34,8 +34,13 @@
                                 <InputText id="description" class="form-control col-md-6" @bind-Value="Book.description"></InputText>
                                 <ValidationMessage For="() => Book.description" />
                             </div>
+                            <div class="form-group">
+                                <label for="publishdate">PublishDate</label>
+                                <InputDate id="publishdate" class="form-control col-md-6" @bind-Value="Book.publishDate"></InputDate>
+                                <ValidationMessage For="() => Book.publishDate" />
+                            </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary"  >Guardar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
                     </div>
