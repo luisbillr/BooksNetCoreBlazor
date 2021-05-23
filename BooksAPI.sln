@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksAPI", "BooksAPI\BooksAPI.csproj", "{62B0868F-3782-47AA-80DA-C1BA0D3B207B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Tests", "Books.Tests\Books.Tests.csproj", "{D94EDC82-B462-4819-B230-B3BAE00F35B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksApp", "BooksApp\BooksApp.csproj", "{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B0868F-3782-47AA-80DA-C1BA0D3B207B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B0868F-3782-47AA-80DA-C1BA0D3B207B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B0868F-3782-47AA-80DA-C1BA0D3B207B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B0868F-3782-47AA-80DA-C1BA0D3B207B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94EDC82-B462-4819-B230-B3BAE00F35B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94EDC82-B462-4819-B230-B3BAE00F35B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94EDC82-B462-4819-B230-B3BAE00F35B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94EDC82-B462-4819-B230-B3BAE00F35B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFAFA4C9-198A-4AF2-ADCB-919713E0D1C4}
+	EndGlobalSection
+EndGlobal
