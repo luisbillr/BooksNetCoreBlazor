@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BooksAPI.Servicios.Entidades
+namespace BooksAPI.Entidades
 {
     public class Book
     {

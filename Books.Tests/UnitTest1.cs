@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 using System.Collections.Generic;
-using BooksAPI.Servicios.Entidades;
+using BooksAPI.Entidades;
 using BooksAPI.Servicios;
 namespace Books.Tests
 {
@@ -36,7 +36,7 @@ namespace Books.Tests
                 description = "Hola",
                 publishDate = DateTime.Now
             };
-            var datos = await BooksService.Put(book);
+            var datos = await BooksService.Put(book.id,book);
             var agua = "";
         }
         [Fact]

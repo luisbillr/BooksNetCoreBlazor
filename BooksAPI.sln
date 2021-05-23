@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksAPI", "BooksAPI\BooksA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Books.Tests", "Books.Tests\Books.Tests.csproj", "{D94EDC82-B462-4819-B230-B3BAE00F35B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksApp", "BooksApp\BooksApp.csproj", "{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApp", "BooksApp\BooksApp.csproj", "{2F51E9FF-6E85-4D24-A2D1-5FEFFE42786C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

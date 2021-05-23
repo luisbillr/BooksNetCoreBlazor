@@ -51,38 +51,50 @@
     <div class="loader">Cargando datos, espere...</div>
 }*@
 
-
-<table class="table table-responsive-md table-hover">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Operacion</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (books.Count() > 0)
-        {
-            @foreach (var item in books)
-            {
+<div class="row">
+    <div class="form-group">
+        <div class="input-group mb-3">
+            <input @key="@books" type="number" class="form-control" @bind-value=@SearchId placeholder="Ingrese un Id" minlength="2" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary btn-sm" type="button" @onclick=@GetBookById><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-responsive-md table-hover">
+            <thead>
                 <tr>
-                    <td>@item.title</td>
-                    <td>
-                        <button @onclick="()=>CreateOrEdit(item.id)" class="btn btn-info"> Editar </button>
-                        <button @onclick="()=>DeleteBook(item.id)" class="btn btn-danger"> Eliminar </button>
-                    </td>
+                    <th>Nombre</th>
+                    <th>Operacion</th>
                 </tr>
+            </thead>
+            <tbody>
+                @if (books.Count() > 0)
+                {
+                    @foreach (var item in books)
+                    {
+                        <tr>
+                            <td>@item.title</td>
+                            <td>
+                                <button @onclick="()=>CreateOrEdit(item.id)" class="btn btn-info"> Editar </button>
+                                <button @onclick="()=>DeleteBook(item.id)" class="btn btn-danger"> Eliminar </button>
+                            </td>
+                        </tr>
+                    } 
+                } else
+                {
+                    <tr>
+                        <td>No hay Datos...</td>
+                    </tr>
 
-            }
-        }
-        @*else
-        {
-            <tr>
-                <td>Cargando datos ejecute una busqueda</td>
-            </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 
-        }*@
-    </tbody>
-</table>
 
 @code {
 

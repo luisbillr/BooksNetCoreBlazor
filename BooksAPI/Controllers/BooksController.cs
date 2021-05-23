@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using BooksAPI.Servicios;
-using BooksAPI.Servicios.Entidades;
+using BooksAPI.Entidades;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BooksAPI.Controllers
@@ -41,7 +41,7 @@ namespace BooksAPI.Controllers
         [HttpPut("{id}")]
         public async Task<string> Put(int id, [FromBody] Book book)
         {
-            return await BooksService.Put(book);
+            return await BooksService.Put(id,book);
         }
 
         // DELETE api/<BooksController>/5

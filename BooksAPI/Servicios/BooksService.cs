@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using BooksAPI.Servicios.Entidades;
+using BooksAPI.Entidades;
 using Newtonsoft.Json;
 namespace BooksAPI.Servicios
 {
@@ -78,7 +78,7 @@ namespace BooksAPI.Servicios
             }
             return Response;
         }
-        public static async Task<string> Put(Book book)
+        public static async Task<string> Put(int id,Book book)
         {
             HttpResponseMessage HttpResponseMessage = new HttpResponseMessage();
             HttpRequestMessage HttpRequestMessage = new HttpRequestMessage();
@@ -86,7 +86,7 @@ namespace BooksAPI.Servicios
             string Response = "";
             try
             {
-                Uri posturi = new Uri(BASEAPIUrl + "/api/v1/Books/" + book.id);
+                Uri posturi = new Uri(BASEAPIUrl + "/api/v1/Books/" + id);
                 var jsonData = JsonConvert.SerializeObject(book);
                 HttpContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
                 HttpRequestMessage.RequestUri = posturi;

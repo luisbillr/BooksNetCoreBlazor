@@ -16,8 +16,11 @@ namespace BooksApp.Pages.Books
         [Inject]
         BooksService booksService { get; set; }
         IEnumerable<Book> books { get; set; } = new List<Book>();
+        IEnumerable<Book> booksBackUp { get; set; } = new List<Book>();
         [Parameter]
         public Book Book { get; set; } = new Book();
+        [Parameter]
+        public int SearchId { get; set; }
         //void Clear() => books = null;
 
 
@@ -31,6 +34,7 @@ namespace BooksApp.Pages.Books
             {
                 await BlockPage();
                 books = await booksService.Get();
+                booksBackUp = books;
                 await UnBlockPage();
             }
             StateHasChanged();
@@ -79,6 +83,31 @@ namespace BooksApp.Pages.Books
             }
 
             
+        }
+        async Task GetBookById()
+        {
+            await BlockPage();
+            if (this.SearchId > 0)
+            {
+                //**************!!!!!!ALTO!!!!****************//
+                //Para usar la busqueda dentro del objeto
+                // Busqueda por reactividad
+                var bookFind = booksBackUp.Where(m => m.id == SearchId);
+                if (bookFind != null)
+                {
+                    this.books = bookFind;
+                }
+
+                //busqueda serverapi
+                /*await BlockPage();
+                books = await booksService.Get(SearchId);
+                await UnBlockPage();*/
+            }
+            else
+            {
+                this.books = booksBackUp;
+            }
+            await UnBlockPage();
         }
         void RaiseInvalidSubmit()
         {
